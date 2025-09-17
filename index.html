@@ -78,6 +78,11 @@
       backdrop-filter: blur(10px) saturate(180%);
       -webkit-backdrop-filter: blur(10px) saturate(180%);
     }
+    .hero-img {
+      width:100%;
+      border-radius:1rem;
+      box-shadow:0 4px 20px rgba(0,0,0,0.4);
+    }
   </style>
 </head>
 <body>
@@ -100,7 +105,9 @@
     <div>
       <h1 style="font-size:2.5rem; font-weight:800; color:var(--heading-color);">Sangyeob Baek</h1>
       <p class="muted" style="font-size:1.1rem; margin-top:1rem;">Neuroscience PhD candidate · MEG-Center, University of Tübingen · CherISH (MSCA) Doctoral Network</p>
-      <p class="muted" style="margin-top:1rem;">“I am a PhD candidate in Neuroscience at the University of Tübingen (MEG-Center) and a Marie Skłodowska-Curie fellow in the CherISH network. My research develops audio-tactile systems and training paradigms to improve spatial hearing in cochlear-implant users, combining EEG/MEG, multi-speaker arrays, and deep neural networks to design rehabilitation strategies for real-world listening.”
+      <p class="muted" style="margin-top:1rem;">
+        I am a PhD candidate in Neuroscience at the University of Tübingen (MEG-Center) and a Marie Skłodowska-Curie fellow in the CherISH network. My research develops audio-tactile systems and training paradigms to improve spatial hearing in cochlear-implant users, combining EEG/MEG, multi-speaker arrays, and deep neural networks to design rehabilitation strategies for real-world listening.
+      </p>
       <div style="margin-top:1.5rem; display:flex; gap:1rem;">
         <a href="#publications" class="button-secondary">View publications</a>
         <a href="#contact" class="button-primary">Get in touch</a>
@@ -108,26 +115,7 @@
       <div class="muted" style="margin-top:1rem; font-size:0.9rem;">Currently: building a wearable audio-tactile prototype · recruiting CI participants</div>
     </div>
     <div class="card">
-      <svg viewBox="0 0 800 600" style="width:100%; height:auto;" xmlns="http://www.w3.org/2000/svg">
-        <rect width="800" height="600" fill="var(--accent-color)" opacity="0.05"/>
-        <g fill="none" stroke="var(--accent-color)" stroke-opacity="0.2" stroke-width="2">
-          <circle cx="400" cy="300" r="180" />
-          <circle cx="400" cy="300" r="240" />
-          <circle cx="400" cy="300" r="300" />
-        </g>
-        <g>
-          <circle cx="400" cy="300" r="8" fill="var(--accent-color)" />
-          <circle cx="640" cy="300" r="6" fill="var(--accent-color)"/>
-          <circle cx="585" cy="420" r="6" fill="var(--accent-color)"/>
-          <circle cx="455" cy="505" r="6" fill="var(--accent-color)"/>
-          <circle cx="345" cy="505" r="6" fill="var(--accent-color)"/>
-          <circle cx="215" cy="420" r="6" fill="var(--accent-color)"/>
-          <circle cx="160" cy="300" r="6" fill="var(--accent-color)"/>
-          <rect x="330" y="250" width="20" height="40" rx="6" fill="var(--link-color)"/>
-          <rect x="450" y="250" width="20" height="40" rx="6" fill="var(--link-color)"/>
-        </g>
-        <text x="24" y="560" font-family="Inter, Arial" font-size="16" fill="var(--subtext-color)">Audio→DNN localization→Tactile guidance (real-time)</text>
-      </svg>
+      <img src="images/sb_main.png" alt="Sangyeob Baek main image" class="hero-img">
     </div>
   </section>
 
