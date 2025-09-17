@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sangyeob Baek — Neuroscience PhD | Audio-Tactile Spatial Hearing</title>
+  <meta name="description" content="Neuroscience PhD candidate building audio-tactile systems for spatial hearing rehabilitation in cochlear-implant users. Research, publications, projects, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+    :root {
+      --bg-color: rgb(29, 29, 29);
+      --text-color: rgb(242, 242, 242);
+      --heading-color: rgb(220, 214, 190);
+      --subtext-color: rgb(242, 242, 242);
+      --border-color: rgba(20, 20, 20, 0.3);
+      --accent-color: rgb(192, 109, 255);
+      --link-color: rgb(173, 216, 230);
+      --card-bg: rgba(15, 15, 15, 0.2);
+    }
+    a { text-decoration: underline; text-underline-offset: 2px; color: var(--link-color); }
+    header, footer, section, article, div, p, h1, h2, h3, h4, h5, h6 { color: inherit; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 1rem;
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      background-clip: padding-box;
+    }
+    .button-primary {
+      background: var(--link-color);
+      color: #000;
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight:600;
+    }
+    .button-secondary {
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: var(--text-color);
+      backdrop-filter: blur(12px) saturate(160%);
+      -webkit-backdrop-filter: blur(12px) saturate(160%);
+      background: rgba(255,255,255,0.15);
+      font-weight:500;
+    }
+    .muted { color: var(--subtext-color); }
+    header {
+      backdrop-filter: blur(10px) saturate(180%);
+      -webkit-backdrop-filter: blur(10px) saturate(180%);
+      background: rgba(255,255,255,0.1);
+    }
+    .logo {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      background: rgba(255,255,255,0.15);
+      font-weight:800;
+      color: var(--logo-text, var(--text-color));
+      text-decoration:none;
+      font-size:1rem;
+      box-shadow:0 2px 6px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px) saturate(180%);
+      -webkit-backdrop-filter: blur(10px) saturate(180%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header style="border-bottom:1px solid var(--border-color);">
+    <div style="max-width:1000px; margin:0 auto; padding:1rem; display:flex; justify-content:space-between; align-items:center;">
+      <a href="#home" class="logo">SB</a>
+      <nav style="display:flex; gap:1rem; font-size:0.9rem; font-weight:500;">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#talks">Talks</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" style="padding:4rem 1rem; max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;">
+    <div>
+      <h1 style="font-size:2.5rem; font-weight:800; color:var(--heading-color);">Sangyeob Baek</h1>
+      <p class="muted" style="font-size:1.1rem; margin-top:1rem;">Neuroscience PhD candidate · MEG-Center, University of Tübingen · CherISH (MSCA) Doctoral Network</p>
+      <p class="muted" style="margin-top:1rem;">“I am a PhD candidate in Neuroscience at the University of Tübingen (MEG-Center) and a Marie Skłodowska-Curie fellow in the CherISH network. My research develops audio-tactile systems and training paradigms to improve spatial hearing in cochlear-implant users, combining EEG/MEG, multi-speaker arrays, and deep neural networks to design rehabilitation strategies for real-world listening.”
+      <div style="margin-top:1.5rem; display:flex; gap:1rem;">
+        <a href="#publications" class="button-secondary">View publications</a>
+        <a href="#contact" class="button-primary">Get in touch</a>
+      </div>
+      <div class="muted" style="margin-top:1rem; font-size:0.9rem;">Currently: building a wearable audio-tactile prototype · recruiting CI participants</div>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 800 600" style="width:100%; height:auto;" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="600" fill="var(--accent-color)" opacity="0.05"/>
+        <g fill="none" stroke="var(--accent-color)" stroke-opacity="0.2" stroke-width="2">
+          <circle cx="400" cy="300" r="180" />
+          <circle cx="400" cy="300" r="240" />
+          <circle cx="400" cy="300" r="300" />
+        </g>
+        <g>
+          <circle cx="400" cy="300" r="8" fill="var(--accent-color)" />
+          <circle cx="640" cy="300" r="6" fill="var(--accent-color)"/>
+          <circle cx="585" cy="420" r="6" fill="var(--accent-color)"/>
+          <circle cx="455" cy="505" r="6" fill="var(--accent-color)"/>
+          <circle cx="345" cy="505" r="6" fill="var(--accent-color)"/>
+          <circle cx="215" cy="420" r="6" fill="var(--accent-color)"/>
+          <circle cx="160" cy="300" r="6" fill="var(--accent-color)"/>
+          <rect x="330" y="250" width="20" height="40" rx="6" fill="var(--link-color)"/>
+          <rect x="450" y="250" width="20" height="40" rx="6" fill="var(--link-color)"/>
+        </g>
+        <text x="24" y="560" font-family="Inter, Arial" font-size="16" fill="var(--subtext-color)">Audio→DNN localization→Tactile guidance (real-time)</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" style="padding:3rem 1rem; max-width:1000px; margin:0 auto; border-top:1px solid var(--border-color);">
+    <h2 style="font-size:1.5rem; font-weight:800; color:var(--heading-color);">Research</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem;">
+      <div class="card">
+        <h3 style="font-weight:600; color:var(--heading-color);">Audio-tactile training for CI users</h3>
+        <p class="muted">Structured Spatial Training (SST) and Ecological Spatial Training (EST) with 7-speaker arrays, EEG markers (MMN, MMRS), and adaptive feedback.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-weight:600; color:var(--heading-color);">DNN sound localization</h3>
+        <p class="muted">In-ear microphones → time-frequency features → direction decoding across head poses and rooms; mapped to body-centered tactile cues.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" style="padding:3rem 1rem; max-width:1000px; margin:0 auto; border-top:1px solid var(--border-color);">
+    <h2 style="font-size:1.5rem; font-weight:800; color:var(--heading-color);">Selected Publications</h2>
+    <ul style="margin-top:1rem;">
+      <li class="card">
+        <strong>Robust spatial hearing beyond primary interaural cues in humans over deep neural networks</strong><br>
+        <span class="muted">Conference talk · Jun 2, 2025 · 15 min + Q&A</span>
+      </li>
+      <li class="card">
+        <strong>Cortical mechanisms of spatial hearing — review (video series)</strong><br>
+        <span class="muted">Nature Reviews Neuroscience (2019) · BS-IV-01x series</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" style="padding:3rem 1rem; max-width:1000px; margin:0 auto; border-top:1px solid var(--border-color);">
+    <h2 style="font-size:1.5rem; font-weight:800; color:var(--heading-color);">Projects</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; margin-top:1rem;">
+      <div class="card">AutoEEG3D — Automatic EEG electrode detection & labeling from 3D scalp scans.</div>
+      <div class="card">Wearable Audio-Tactile Prototype — Real-time DNN localization → shoulder vibrotactors.</div>
+      <div class="card">Money Manager App — Python GUI for spending analytics.</div>
+    </div>
+  </section>
+
+  <!-- Talks -->
+  <section id="talks" style="padding:3rem 1rem; max-width:1000px; margin:0 auto; border-top:1px solid var(--border-color);">
+    <h2 style="font-size:1.5rem; font-weight:800; color:var(--heading-color);">Talks & Teaching</h2>
+    <ul style="margin-top:1rem;">
+      <li class="card">Intro to Spatial Hearing Rehabilitation — Guest lecture · slides + demo</li>
+      <li class="card">InDesign e-book workshop (TA) — Layout basics, repeated shapes, bookstore trend scans</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="padding:3rem 1rem; max-width:1000px; margin:0 auto; border-top:1px solid var(--border-color);">
+    <h2 style="font-size:1.5rem; font-weight:800; color:var(--heading-color);">Contact</h2>
+    <p class="muted">Email: <a href="mailto:sangyeob@example.com">sangyeob@example.com</a></p>
+    <p class="muted">GitHub: <a href="https://github.com/USERNAME">github.com/USERNAME</a></p>
+    <p class="muted">YouTube: BacktoScience</p>
+  </section>
+
+  <footer style="padding:2rem 1rem; border-top:1px solid var(--border-color); color:var(--subtext-color); max-width:1000px; margin:0 auto; display:flex; justify-content:space-between;">
+    <span>© <span id="y"></span> Sangyeob Baek</span>
+    <div>
+      <a href="#home">Back to top</a> · <a href="/CV.pdf">CV</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
