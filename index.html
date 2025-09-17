@@ -112,7 +112,7 @@
         <a href="#publications" class="button-secondary">View publications</a>
         <a href="#contact" class="button-primary">Get in touch</a>
       </div>
-      <div class="muted" style="margin-top:1rem; font-size:0.9rem;">Currently: building a wearable audio-tactile prototype · recruiting CI participants</div>
+      <div class="muted" style="margin-top:1rem; font-size:0.9rem;">{% capture about %}{% include_relative about.md %}{% endcapture %}{{ about | markdownify }}</div>
     </div>
     <div class="card">
       <img src="images/sb_main.png" alt="Sangyeob Baek main image" class="hero-img">
