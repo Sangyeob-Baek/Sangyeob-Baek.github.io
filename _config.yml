@@ -1,13 +1,13 @@
-title: John Doe # your name (or website title) here
-logo: "/images/logo.png?raw=true" # your photo (or logo) here
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
+title: Sangyeob Baek
+logo: "/images/sb_main.png?raw=true" # your photo (or logo) here
+description: > 
+  Neuroscience PhD candidate · MEG-Center, University of Tübingen · CherISH (MSCA) Doctoral Network
   <br><br>
-  Second description 
+  I am a PhD candidate in Neuroscience at the University of Tübingen (MEG-Center) and a Marie Skłodowska-Curie fellow in the CherISH network. My research develops audio-tactile systems and training paradigms to improve spatial hearing in cochlear-implant users, combining EEG/MEG, multi-speaker arrays, and deep neural networks to design rehabilitation strategies for real-world listening.
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  <a href="https://www.linkedin.com/in/sangyeob-baek-b195962b9/">View My LinkedIn Profile</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
-google_analytics: UA-000000-0 # your Google Analytics tracking ID here
+google_analytics: G-1LBQK450LP # your Google Analytics tracking ID here
