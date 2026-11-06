@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,6 +53,7 @@
   .lead { font-size: 21px; line-height: 1.45; font-weight: 500; }
   .hl, .enc, .rd { color: #201e1d; font-weight: inherit; padding: 0 1px; }
   .hl { background: #F2AA84; }
+  .q { color: var(--accent); }
   .enc { background: #E59EDD; }
   .rd { background: #83CBEB; }
   figure { margin: 26px 0; }
@@ -136,13 +137,13 @@
   Rehabilitation focuses on understanding speech, yet <span class="hl">understanding speech in noise needs
   spatial hearing</span>, and spatial hearing is rarely trained. Training to localize can help.</p>
 
-  <p class="bio lead">When CI users learn to localize sounds, <span class="hl">what changes in the brain?</span></p>
+  <p class="bio lead">When CI users learn to localize sounds, <span class="q">what changes in the brain?</span></p>
 
   <figure class="steps" aria-label="Where is the voice? With a CI the cues are blurred. Train localization while recording EEG. What changes in the brain?">
     <div class="step"><img class="lt" src="images/icons/listener.svg" alt=""><img class="dk" src="images/icons/listener_dark.svg" alt=""><span>Where is<br>the voice?</span></div>
     <div class="step"><img class="lt" src="images/icons/ci_orange.svg" alt=""><img class="dk" src="images/icons/ci_orange_dark.svg" alt=""><span>A CI blurs<br>the cues</span></div>
     <div class="step"><img class="lt" src="images/icons/eeg_head.svg" alt=""><img class="dk" src="images/icons/eeg_head_dark.svg" alt=""><span>Train,<br>record EEG</span></div>
-    <div class="step"><img class="lt" src="images/icons/brain_compass.svg" alt=""><img class="dk" src="images/icons/brain_compass_dark.svg" alt=""><span class="hl">What changes<br>in the brain?</span></div>
+    <div class="step"><img class="lt" src="images/icons/brain_compass.svg" alt=""><img class="dk" src="images/icons/brain_compass_dark.svg" alt=""><span class="q">What changes<br>in the brain?</span></div>
   </figure>
 
   <p class="bio">Does the brain represent sound position more sharply (<span class="enc">encoding</span>), or does
@@ -202,7 +203,7 @@
 <script>
   (function () {
     var root = document.documentElement, KEY = "sb-theme";
-    try { if (localStorage.getItem(KEY) === "light") root.removeAttribute("data-theme"); } catch (e) {}
+    try { if (localStorage.getItem(KEY) === "dark") root.setAttribute("data-theme", "dark"); } catch (e) {}
     document.getElementById("theme").addEventListener("click", function () {
       var dark = root.getAttribute("data-theme") !== "dark";
       if (dark) root.setAttribute("data-theme", "dark"); else root.removeAttribute("data-theme");
