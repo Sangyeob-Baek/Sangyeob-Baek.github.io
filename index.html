@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sangyeob Baek</title>
+<meta name="description" content="Sangyeob Baek, PhD candidate at the MEG Center, University of Tübingen. Spatial hearing, cochlear implants, EEG/MEG.">
+<link rel="icon" href="images/sb_main.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3f2f2; --surface: #eae9e9; --ink: #201e1d; --muted: #6f6b6b; --rule: #d6d3d3;
+    --accent: #EE6F2B; --link: #0091b5; --enc: #cc2fc4; --rd: #0091b5;
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1a19; --surface: #262423; --ink: #f0eeed; --muted: #a9a4a4; --rule: #3a3736;
+    --accent: #f08a52; --link: #4cc3e0; --enc: #e070d9; --rd: #4cc3e0;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 17px/1.55 "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+    transition: background .2s, color .2s;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 16px 40px; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* toggle */
+  .toggle {
+    position: fixed; top: 16px; right: 16px; width: 58px; height: 30px; border-radius: 15px;
+    border: 1px solid var(--rule); background: var(--surface); cursor: pointer; padding: 0;
+  }
+  .toggle svg { position: absolute; top: 7px; width: 16px; height: 16px; stroke: var(--muted); fill: none;
+    stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .toggle .sun { left: 5px; } .toggle .moon { right: 5px; }
+  .toggle .knob {
+    position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--ink); transition: transform .2s;
+  }
+  :root[data-theme="dark"] .toggle .knob { transform: translateX(28px); }
+
+  /* header */
+  header { display: flex; gap: 24px; align-items: center; }
+  header img { width: 140px; height: 140px; border-radius: 6px; flex: none; object-fit: cover; }
+  h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin: 0 0 6px; }
+  .role { margin: 0; color: var(--muted); }
+  .bio { margin: 28px 0 0; }
+  .bio + .bio { margin-top: 14px; }
+  .lead { font-size: 21px; line-height: 1.45; font-weight: 500; }
+  .hl, .enc, .rd { color: #201e1d; font-weight: inherit; padding: 0 1px; }
+  .hl { background: #F2AA84; }
+  .enc { background: #E59EDD; }
+  .rd { background: #83CBEB; }
+  figure { margin: 26px 0; }
+  .illu svg { width: 100%; height: auto; display: block; }
+  .illu .ln { fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .illu .ac { fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; }
+  .illu .dash { stroke-dasharray: 2 7; }
+  .illu .dot { fill: var(--accent); }
+  .illu .tx { fill: var(--ink); font: 500 17px "Archivo", system-ui, sans-serif; }
+  .diagram img { width: 100%; height: auto; display: block; border-radius: 6px; background: #fff; }
+  .photo img { width: 100%; height: auto; display: block; border-radius: 6px; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+  .step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative;
+    font-size: 15px; line-height: 1.3; font-weight: 500; }
+  .step img { height: 72px; width: auto; max-width: 92%; margin-bottom: 12px; object-fit: contain; }
+  .step + .step::before { content: ""; position: absolute; top: 36px; left: -14%; width: 28%; border-top: 1.5px solid var(--muted); }
+  .step .dk { display: none; }
+  :root[data-theme="dark"] .step .lt { display: none; }
+  :root[data-theme="dark"] .step .dk { display: block; }
+  figcaption { margin-top: 10px; font-size: 15px; color: var(--muted); }
+
+  h2 {
+    font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin: 44px 0 4px;
+    padding-top: 18px; border-top: 1px solid var(--rule);
+  }
+  .event { color: var(--accent); font-weight: 700; margin: 0 0 14px; }
+  .talk-title { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3; margin: 0 0 6px; }
+  .authors { margin: 0 0 14px; color: var(--muted); }
+
+  ul.links { list-style: none; margin: 8px 0 0; padding: 0; }
+  ul.links li {
+    display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  ul.links li:last-child { border-bottom: 0; }
+  .k { font-weight: 700; }
+  .pending { color: var(--muted); }
+  .sub { color: var(--muted); font-size: 15px; }
+  ul.pubs { list-style: none; margin: 8px 0 0; padding: 0; font-size: 15px; line-height: 1.5; }
+  ul.pubs li { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  ul.pubs li:last-child { border-bottom: 0; }
+  .py { font-weight: 700; font-size: 17px; }
+  ul.pubs b { font-weight: 700; }
+
+  footer { margin-top: 52px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--muted); }
+  footer p { margin: 0 0 6px; }
+
+  @media (max-width: 520px) {
+    main { padding-top: 64px; }
+    header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    header img { width: 88px; height: 88px; }
+    h1 { font-size: 32px; }
+    ul.links li, ul.pubs li { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<button class="toggle" id="theme" aria-label="Toggle light and dark mode">
+  <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+  <span class="knob"></span>
+</button>
+
+<main>
+  <header>
+    <img src="images/sb_portrait.jpg" alt="Sangyeob Baek">
+    <div>
+      <h1>Sangyeob Baek</h1>
+      <p class="role">PhD candidate, MEG Center, University of Tübingen<br>Marie Skłodowska-Curie fellow, CherISH Doctoral Network</p>
+    </div>
+  </header>
+
+  <p class="bio">You're in a bar. Music, laughter, clinking glasses. Someone behind you calls your name,
+  and <span class="hl">you turn before you think</span>.</p>
+
+  <p class="bio">Your brain knew <span class="hl">where</span> the voice came from, from differences between
+  your two ears smaller than a millisecond. That is how it picks one voice out of the noise.</p>
+
+  <p class="bio">With a <span class="hl">cochlear implant</span>, these tiny timing cues are largely lost. The bar
+  becomes one wall of sound: hard to tell where your name came from, and hard to follow one voice.
+  Rehabilitation focuses on understanding speech, yet <span class="hl">understanding speech in noise needs
+  spatial hearing</span>, and spatial hearing is rarely trained. Training to localize can help.</p>
+
+  <p class="bio lead">When CI users learn to localize sounds, <span class="hl">what changes in the brain?</span></p>
+
+  <figure class="steps" aria-label="Where is the voice? With a CI the cues are blurred. Train localization while recording EEG. What changes in the brain?">
+    <div class="step"><img class="lt" src="images/icons/listener.svg" alt=""><img class="dk" src="images/icons/listener_dark.svg" alt=""><span>Where is<br>the voice?</span></div>
+    <div class="step"><img class="lt" src="images/icons/ci_orange.svg" alt=""><img class="dk" src="images/icons/ci_orange_dark.svg" alt=""><span>A CI blurs<br>the cues</span></div>
+    <div class="step"><img class="lt" src="images/icons/eeg_head.svg" alt=""><img class="dk" src="images/icons/eeg_head_dark.svg" alt=""><span>Train,<br>record EEG</span></div>
+    <div class="step"><img class="lt" src="images/icons/brain_compass.svg" alt=""><img class="dk" src="images/icons/brain_compass_dark.svg" alt=""><span class="hl">What changes<br>in the brain?</span></div>
+  </figure>
+
+  <p class="bio">Does the brain represent sound position more sharply (<span class="enc">encoding</span>), or does
+  it learn to <span class="rd">read out</span> the same information into a better response? I study this with
+  audio-tactile training, loudspeakers around the listener and EEG/MEG.</p>
+
+  <figure class="photo">
+    <img src="images/lab_setup.jpg" alt="A listener wearing an EEG cap in a sound-proof booth, facing a screen between loudspeakers" width="1800" height="1200">
+    <figcaption>The localization lab in Tübingen: loudspeakers around the listener, EEG on the head.</figcaption>
+  </figure>
+
+  <h2>Contact</h2>
+  <ul class="links">
+    <li><span class="k">Email</span><a href="mailto:sangyeob.baek@uni-tuebingen.de">sangyeob.baek@uni-tuebingen.de</a></li>
+    <li><span class="k">Bluesky</span><a href="https://bsky.app/profile/s-baek.bsky.social">@s-baek.bsky.social</a></li>
+    <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/sangyeob-baek-b195962b9/">Sangyeob Baek</a></li>
+  </ul>
+
+  <h2>CV</h2>
+  <ul class="links cv">
+    <li><span class="k">2024–</span><span>PhD, Neuroscience, University of Tübingen (IMPRS / GTC), MEG Center<br>
+      <span class="sub">Audio-tactile spatial hearing training in cochlear implant users, EEG. Supervisor: Christoph Braun</span></span></li>
+    <li><span class="k">2022–2024</span><span>M.Sc. Cognitive Neuroscience, CIMeC, University of Trento</span></li>
+  </ul>
+
+  <h2>Publications</h2>
+  <ul class="pubs">
+    <li><span class="py">2026</span><span>Stier C, Loose M, Loew C, Segovia-Oropeza M, <b>Baek S</b>, Lerche H, et al.
+      Comprehensive evaluation of EEG spatial sampling, head modelling and parcellation effects on network alterations in idiopathic generalized epilepsy.
+      <i>Brain Communications</i> 8(1), fcag022.</span></li>
+    <li><span class="py">2025</span><span>Greco A, <b>Baek S</b>, Rastelli C, Siegel M, Braun C.
+      <a href="https://doi.org/10.1101/2025.08.05.668776">Robust spatial hearing beyond primary interaural cues in humans over deep neural networks.</a>
+      <i>bioRxiv</i>.</span></li>
+    <li><span class="py">2023</span><span>Greco A, <b>Baek S</b>, Middelmann T, Mehring C, Braun C, Marquetand J, et al.
+      <a href="https://doi.org/10.1038/s41598-023-49347-z">Discrimination of finger movements by magnetomyography with optically pumped magnetometers.</a>
+      <i>Scientific Reports</i> 13, 22157.</span></li>
+    <li><span class="py">2022</span><span>Semeia L, Middelmann T, <b>Baek S</b>, Sometti D, Chen H, Grimm A, Lerche H, et al.
+      <a href="https://doi.org/10.3389/fnins.2022.1010242">Optically pumped magnetometers detect altered maximal muscle activity in neuromuscular disease.</a>
+      <i>Frontiers in Neuroscience</i> 16, 1010242.</span></li>
+    <li><span class="py">2021</span><span>Marquetand J, Middelmann T, Dax J, <b>Baek S</b>, Sometti D, Grimm A, et al.
+      Optically pumped magnetometers reveal fasciculations non-invasively.
+      <i>Clinical Neurophysiology</i> 132(10), 2681–2684.</span></li>
+    <li><span class="py">2021</span><span>Sometti D, Semeia L, <b>Baek S</b>, Chen H, Righetti G, Dax J, Kronlage C, et al.
+      <a href="https://doi.org/10.3389/fphys.2021.724755">Muscle fatigue revisited: insights from optically pumped magnetometers.</a>
+      <i>Frontiers in Physiology</i> 12, 724755.</span></li>
+    <li><span class="py">2021</span><span>Marquetand J, Dax J, Sometti D, <b>Baek S</b>, Kronlage C, Siegel M, Braun C, et al.
+      Magnetomyography: new opportunities with optically pumped magnetometers.
+      <i>Int. J. Bioelectromagnetism</i> 23(2), 1–4.</span></li>
+  </ul>
+
+  <footer>
+    <p>CherISH has received funding from the European Union's Horizon Europe research and innovation programme
+    under the Marie Skłodowska-Curie grant agreement No 101120054.</p>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var root = document.documentElement, KEY = "sb-theme";
+    try { if (localStorage.getItem(KEY) === "light") root.removeAttribute("data-theme"); } catch (e) {}
+    document.getElementById("theme").addEventListener("click", function () {
+      var dark = root.getAttribute("data-theme") !== "dark";
+      if (dark) root.setAttribute("data-theme", "dark"); else root.removeAttribute("data-theme");
+      try { localStorage.setItem(KEY, dark ? "dark" : "light"); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>
